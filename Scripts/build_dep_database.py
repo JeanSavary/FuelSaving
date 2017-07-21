@@ -5,14 +5,12 @@
 #Importation des librairies 
 
 from bs4 import BeautifulSoup
-import xlutils
-import requests
 import pandas as pd
 import os
 #--------------------------
 #Définition du répertoire courant
 
-os.chdir("/Users/MacbookJeansavary/Desktop/Programs/FuelSaving")
+os.chdir("/Users/MacbookJeansavary/Desktop/Programs/FuelSaving/DataBases")
 departements_file = open("departement.html","r")
 
 #--------------------------
@@ -41,5 +39,5 @@ for i in range (10) :
 data = {"Département" : departements,
         "Code" : departements_code}
 
-dataFrame = pd.DataFrame(data).to_csv("DataBase.csv", encoding = 'utf-8')
+dataFrame = pd.DataFrame(data).to_csv("Dep_dataBase.csv", encoding = 'utf-8')
 
